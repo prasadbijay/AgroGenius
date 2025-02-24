@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in- Agro-Genius</title>
+    <link rel="stylesheet" href="sign-in.css">
+    <link rel="icon" href="data:,">
+
+</head>
+<body>
+    <header class="head">     
+        <h2>Sign Up for Agro-Genius</h2>
+        <p>Join Agro-Genius to get tailored crop recommendations based on weather data. This website is only valid for North-East India.</p>
+    </header>
+
+    <div class="login-container">
+        <div class="user-form">
+            <form  method="POST">
+                <div class="name">
+                    <label for="name" class="user-name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                
+                <div class="email">
+                    <label for="email" class="user-email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+
+                <div class="number">
+                    <label for="Number" class="phone" >Number:</label>
+                    <input type="tel" id="Number" name="Number" required pattern="^[0-9]{10}$" title="Enter a valid 10-digit phone number" placeholder="Enter your number">
+                </div>
+
+                <div class="password">
+                    <label for="text" class="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <button aria-expanded="false" aria-controls="menu" id="togglePassword">👁️</button>
+
+                </div>
+                </div>
+                
+
+                <input type="submit" value="Submit">
+                
+                <div class="weather">
+                    <a href="region.html">Get Recommendations</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="get">
+        <button class="getcrop"><a href="region.html">Check Recommended Crop</button></a>
+    </div>
+<script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Management</title>
+</head>
+<body>
+    <h1>Admin Management</h1>
+
+    <form id="adminForm">
+        <input type="hidden" id="adminId">
+        <label>Name: <input type="text" id="adminName" required></label>
+        <label>Email: <input type="email" id="adminEmail" required></label>
+        <label>Password: <input type="password" id="adminPassword"></label>
+        <label>Phone: <input type="text" id="adminPhone" required></label>
+        <button type="submit">Save</button>
+    </form>
+
+    <h2>Admin List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="adminTableBody"></tbody>
+    </table>
+
+    <script src="admin-admin.js"></script>
+</body>
+</html>

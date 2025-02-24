@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Region Management - Agro-Genius</title>
+    <link rel="stylesheet" href="region.css">
+</head>
+<body>
+
+<header>
+    <h1>Region Management - Agro-Genius</h1>
+    <p class="region">
+        Regions play a crucial role in Agro-Genius by helping categorize
+         agricultural areas based on geography. Each region is associated 
+         with a specific state and is used to provide tailored crop recommendations 
+         based on weather conditions, soil type, and climate patterns.
+    </p>
+</header>
+
+<div class="container">
+    <h2>Add Region</h2>
+    <form id="regionForm">
+        <label for="regionName">Region Name</label>
+        <input type="text" id="regionName" required minlength="3" maxlength="50" placeholder="Enter region name">
+        
+        <label for="state">State</label>
+        <input type="text" id="state" required minlength="3" maxlength="50" placeholder="Enter state name">
+        
+        <button type="submit">Add Region</button>
+    </form>
+
+    <div class="region-list">
+        <h2>Existing Regions</h2>
+        <ul id="regionList"></ul>
+    </div>
+    <div class="weather" style="display: none;">
+        add more details
+        <a href="WeatherData.html"></a>
+    </div>
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>
+    

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Crops</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Manage Crops</h2>
+
+        <div id="formContainer">
+            <form id="cropForm">
+                <input type="hidden" id="cropId">
+                <label for="cropName">Crop Name:</label>
+                <input type="text" id="cropName" required>
+
+                <label for="otherCrop">Other Crop:</label>
+                <input type="text" id="otherCrop">
+
+                <button type="submit" id="submitBtn">Create Crop</button>
+            </form>
+        </div>
+
+        <h3>Existing Crops</h3>
+        <button onclick="fetchCrops()">Fetch Crops</button> 
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Crop Name</th>
+                    <th>Other Crop</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="cropTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="admin-crops.js"></script>
+</body>
+</html>

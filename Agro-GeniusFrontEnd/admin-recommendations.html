@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Recommendations</title>
+    <script defer src="admin-recommendations.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, textarea, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        button {
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Add Crop Recommendation</h2>
+    <form id="recommendation-form">
+        <label for="weatherData">Select Weather Data:</label>
+        <select id="weatherData" required>
+            <option value="">Loading...</option>
+        </select>
+
+        <label for="recommendationText">Recommendation Text:</label>
+        <textarea id="recommendationText" rows="4" required></textarea>
+
+        <button type="submit">Submit Recommendation</button>
+    </form>
+
+    <p id="response-message"></p>
+
+</body>
+</html>

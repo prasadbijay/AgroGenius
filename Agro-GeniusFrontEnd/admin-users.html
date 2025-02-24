@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - User Management</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    
+    form {
+        background: white;
+        padding: 20px;
+        max-width: 400px;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+    }
+    
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    button:hover {
+        background-color: #218838;
+    }
+    
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+        background-color: #007bff;
+        color: white;
+    }
+    
+    td {
+        background-color: #fff;
+    }
+    
+    td button {
+        padding: 5px 10px;
+        margin-right: 5px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    td button:first-child {
+        background-color: #ffc107;
+        color: black;
+    }
+    
+    td button:first-child:hover {
+        background-color: #e0a800;
+    }
+    
+    td button:last-child {
+        background-color: #dc3545;
+        color: white;
+    }
+    
+    td button:last-child:hover {
+        background-color: #c82333;
+    }
+    </style>
+</head>
+<body>
+    <h2>User Management</h2>
+    
+    <form id="userForm">
+        <input type="hidden" id="userId">
+        
+        <label for="userName">Name:</label>
+        <input type="text" id="userName" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" required>
+        
+        <label for="regionId">Region ID:</label>
+        <input type="number" id="regionId" required>
+        
+        <button type="submit" id="submitBtn">Add User</button>
+    </form>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Region</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody"></tbody>
+    </table>
+    
+    <script src="admin-users.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Weather Data</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    #weatherForm {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    
+    label {
+        font-weight: bold;
+        color: #555;
+    }
+    
+    input, select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    
+    #submitBtn {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    
+    #submitBtn:hover {
+        background-color: #218838;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    .edit-btn {
+        background-color: #2196F3;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .delete-btn {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    </style>
+   
+</head>
+<body>
+
+    <h2>Weather Data Management</h2>
+<body>
+        <div class="container">
+            <h2>Weather Data Management</h2>
+        
+            <form id="weatherForm">
+                <input type="hidden" id="weatherId">
+                
+                <label>Temperature (°C):</label>
+                <input type="number" id="temperature" required>
+                
+                <label>Range Temperature (°C):</label>
+                <input type="number" id="rangeTemperature" required>
+                
+                <label>Soil Type:</label>
+                <select id="soilType" required>
+                    <option value="">Select Soil Type</option>
+                    <option value="Clay">Clay</option>
+                    <option value="Sandy">Sandy</option>
+                    <option value="Loamy">Loamy</option>
+                </select>
+        
+                <label>Weather Condition:</label>
+                <select id="weatherCondition" required>
+                    <option value="">Select Condition</option>
+                    <option value="Sunny">Sunny</option>
+                    <option value="Rainy">Rainy</option>
+                    <option value="Cloudy">Cloudy</option>
+                    <option value="Stormy">Stormy</option>
+                </select>
+        
+                <button type="submit" id="submitBtn">Create Weather Data</button>
+            </form>
+        
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Temperature (°C)</th>
+                        <th>Range Temp (°C)</th>
+                        <th>Soil Type</th>
+                        <th>Weather Condition</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="weatherTableBody"></tbody>
+            </table>
+        </div>
+        
+        <script src="admin-weather.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        
+        <label for="crudOptions">Select an operation:</label>
+        <select id="crudOptions">
+            <option value="">-- Select an option --</option>
+            <option value="crops">Manage Crops</option>
+            <option value="users">Manage Users</option>
+            <option value="weather">Manage Weather Data</option>
+            <option value="regions">Manage Regions</option>
+            <option value="recommendations">Manage Recommendations</option>
+            
+        </select>
+
+        
+        <button onclick="navigateToPage()">Go</button>
+    </div>
+
+    <script>
+    function navigateToPage() {
+    let entity = document.getElementById("crudOptions").value;
+    if (!entity) {
+        alert("Please select an option!");
+        return;
+    }
+    let pageUrl = `admin-${entity}.html`;
+    window.location.href = pageUrl;
+}
+
+window.navigateToPage = navigateToPage;
+
+    </script>
+  <script type="module" src="admin.js"></script>
+
+
+</body>
+</html>
